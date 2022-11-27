@@ -1,12 +1,13 @@
 // React
 import React from 'react'
-import SideMenu from './SideMenu'
 
 // Local
-import { ContainerLayout } from './styles'
 import TopMenu from './TopMenu'
+import SideMenu from './SideMenu'
+import { ContainerLayout } from './styles'
+import { ILayoutProps } from './types'
 
-export default function Layout({ children }: any) {
+export default function Layout({ children }: ILayoutProps) {
   return (
     <ContainerLayout>
       <TopMenu />
