@@ -11,10 +11,16 @@ export const GlobalStyle = createGlobalStyle`
     --content_color: #2A2823;
     --divider_color: #E5E5E5;
     --notification_color: #CC0000;
+    --item_side_menu_hover: #F2F2F2;
 
     /* Size top menu */
     --height_menu: 55px;
+
+    /* Size width menu */
+    --size_width_menu_expanded: 240px;
+    --size_width_menu: 90px;
   }
+
   [data-theme='dark'] {
     --background_page_color: #0F0F0F;
     --item_active_color: #F2F2F2;
@@ -24,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     --content_color: #2A2823;
     --divider_color: #E5E5E5;
     --notification_color: #CC0000;
+    --item_side_menu_hover: #F2F2F2;
   }
 
   * {

@@ -1,15 +1,23 @@
 // React
 import React from 'react'
+import { Switch } from 'react-router-dom'
+
+// Third party
+import { map } from 'lodash'
 
 // Local
-import Routes from './routes'
-import { GlobalStyle } from './styles/global'
+import Layout from './components/Layout'
+import { routes } from './routes'
+import { RouteWithSubRoutes } from './components/common/route-with-sub-routes'
 
 export default function App() {
   return (
-    <>
-      <GlobalStyle />
-      <Routes />
-    </>
+    <Layout>
+      <Switch>
+        {map(routes, (route, index) => {
+          return <RouteWithSubRoutes key={index} {...route} />
+        })}
+      </Switch>
+    </Layout>
   )
 }

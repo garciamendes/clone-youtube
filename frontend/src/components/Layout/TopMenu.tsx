@@ -17,9 +17,11 @@ import { ContainerTopMenu, Logo } from './styles'
 
 export default function TopMenu() {
   return (
-    <ContainerTopMenu>
+    <ContainerTopMenu percentLoading={0}>
       <div className='content_menu_logo'>
-        <List className='cursor_pointer' size={SizeIcons} />
+        <span className='more_info_menu'>
+          <List className='cursor_pointer' size={SizeIcons} />
+        </span>
         <Logo className='cursor_pointer' src={LogoImg} />
       </div>
 
