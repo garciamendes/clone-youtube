@@ -54,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
   .divider {
     height: 1px;
     width: 100%;
-    margin: 1rem 0;
+    margin: .4rem 0;
     border-radius: 10px;
     background-color: var(--item_side_menu_hover);
   }
