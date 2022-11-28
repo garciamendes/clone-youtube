@@ -50,6 +50,14 @@ export const GlobalStyle = createGlobalStyle`
   .cursor_pointer {
     cursor: pointer;
   }
+
+  .divider {
+    height: 1px;
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 10px;
+    background-color: var(--item_side_menu_hover);
+  }
 `
 
 export const SizeIcons = 25

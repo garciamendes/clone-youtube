@@ -15,11 +15,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <>
-    {/* <Provider store={store}> */}
+    <Provider store={store}>
       <GlobalStyle />
       <HashRouter>
         <Route path='/' component={App} />
       </HashRouter>
-    {/* </Provider> */}
+    </Provider>
   </>
 )

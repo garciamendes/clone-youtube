@@ -1,6 +1,8 @@
 // Third party
 import styled from 'styled-components'
-import { ILoadingProps } from './types'
+
+// Local
+import { ILoadingProps, IMenuExpanded } from './types'
 
 export const ContainerLayout = styled.div`
   display: flex;
@@ -13,10 +15,10 @@ export const ContainerLayout = styled.div`
   }
 `
 
-export const ContainerSideMenu = styled.div`
+export const ContainerSideMenu = styled.div<IMenuExpanded>`
   display: flex;
   height: 100%;
-  min-width: var(--size_width_menu_expanded);
+  min-width: ${props => props.isMenuExpanded ? 'var(--size_width_menu_expanded)' : 'var(--size_width_menu)'};
 `
 
 export const ContainerTopMenu = styled.div<ILoadingProps>`
@@ -100,6 +102,10 @@ export const ContainerSideMenuItems = styled.div`
           background: var(--item_side_menu_hover);
         }
 
+        &.active {
+          background: var(--item_side_menu_hover);
+        }
+
         & > span {
           margin-top: 0.2rem;
           font-size: 11px;
@@ -121,18 +127,11 @@ export const ContainerSideMenuItemsExpanded = styled.div`
     width: 90%;
     padding-top: .4rem;
 
-    .divider {
-      height: 1px;
-      width: 100%;
-      margin: 1rem 0;
-      border-radius: 10px;
-      background-color: var(--item_side_menu_hover);
-    }
-
     li {
       display: flex;
+      flex-direction: column;
 
-       & .content_item {
+      & .content_item {
         cursor: pointer;
         display: flex;
         align-items: center;

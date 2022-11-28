@@ -35,6 +35,7 @@ export const routes: Array<IRoute> = [
     menu: true,
     exact: false,
     name: 'Biblioteca',
+    isDivider: true,
     icon: <Books size={SizeIcons} />
   },
   {
@@ -43,6 +44,7 @@ export const routes: Array<IRoute> = [
     menu: true,
     exact: false,
     name: 'Confirgurações',
+    isDivider: true,
     icon: <GearSix size={SizeIcons} />
   },
 ]

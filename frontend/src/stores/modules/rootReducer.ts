@@ -1,4 +1,9 @@
 // Third party
 import { combineReducers } from 'redux'
 
-export default combineReducers({})
+// Local
+import { expandMenuReducer } from './SideMenu/reducer'
+
+export default combineReducers({
+  expandMenu: expandMenuReducer
+})

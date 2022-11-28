@@ -6,11 +6,12 @@ interface IComponent {
 }
 
 export interface IRoute {
-  component: React.FC<IComponent>
-  exact: boolean
-  menu?: boolean
-  path: string
-  icon?: ReactNode
-  name?: string
+  component: React.FC<IComponent>,
+  exact: boolean,
+  menu?: boolean,
+  path: string,
+  icon?: ReactNode,
+  name?: string,
+  isDivider?: boolean,
   routes?: IRoute[]
 }

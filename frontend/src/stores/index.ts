@@ -17,5 +17,5 @@ const store = createStore(
   )
 )
 
-sagaMiddleware.run(rootSaga as any)
+sagaMiddleware.run(rootSaga)
 export default store
