@@ -51,6 +51,40 @@ export const ContainerTopMenu = styled.div<ILoadingProps>`
     }
   }
 
+  .content_actions_profile {
+    display: flex;
+    align-items: center;
+
+    .content_notification {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 35px;
+      width: 35px;
+      border-radius: 50px;
+      transition: .24s all;
+
+      &:hover {
+        background: var(--item_side_menu_hover);
+      }
+
+      .amount_notifications {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: -2px;
+        color: #fff;
+        font-size: .8rem;
+        width: 1.3rem;
+        border-radius: 7px;
+        background: var(--notification_color);
+      }
+    }
+  }
+
   &::after {
     content: "";
     height: 4px;

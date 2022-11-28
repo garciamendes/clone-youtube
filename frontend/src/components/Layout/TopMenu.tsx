@@ -42,7 +42,10 @@ export default function TopMenu() {
       <SearchBar />
 
       <div className='content_actions_profile'>
-        <BellSimple className='cursor_pointer' size={SizeIcons} />
+        <div className='content_notification'>
+          <BellSimple className='cursor_pointer' size={SizeIcons} />
+          <span className='amount_notifications'>9+</span>
+        </div>
       </div>
     </ContainerTopMenu>
   )
